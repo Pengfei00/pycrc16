@@ -20,9 +20,9 @@
 #
 ##############################################################################
 
-from distutils.core import setup, Extension
 import os
 import sys
+from distutils.core import setup, Extension
 
 if __name__ == '__main__':
 
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     readmePath = os.path.join(os.path.dirname(__file__), 'README.txt')
     long_description = open(readmePath, "rt").read()
 
-    setup(name='crc16',
+    setup(name='pycrc16',
           version='0.1.2',
           description='Library for calculating CRC16',
           author='Gennady Trafimenkov',
@@ -50,41 +50,40 @@ if __name__ == '__main__':
           keywords=['CRC16'],
           packages=['crc16'],
           package_dir={'': baseVersion},
-          ext_modules = [Extension('crc16._crc16', sources=['src/_crc16module.c']),
-                         ],
+          ext_modules=[Extension('crc16._crc16', sources=['src/_crc16module.c'])],
 
           # get classifiers from here
           # http://pypi.python.org/pypi?:action=list_classifiers
-          classifiers = [
-            # "Development Status :: 1 - Planning",
-            # "Development Status :: 2 - Pre-Alpha",
-            "Development Status :: 3 - Alpha",
-            # "Development Status :: 4 - Beta",
-            # "Development Status :: 5 - Production/Stable",
-            # "Development Status :: 6 - Mature",
-            # "Development Status :: 7 - Inactive",
+          classifiers=[
+              # "Development Status :: 1 - Planning",
+              # "Development Status :: 2 - Pre-Alpha",
+              "Development Status :: 3 - Alpha",
+              # "Development Status :: 4 - Beta",
+              # "Development Status :: 5 - Production/Stable",
+              # "Development Status :: 6 - Mature",
+              # "Development Status :: 7 - Inactive",
 
-            # "Environment :: Other Environment",
+              # "Environment :: Other Environment",
 
-            "Intended Audience :: Developers",
-            "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+              "Intended Audience :: Developers",
+              "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
 
-            # "Operating System :: OS Independent",
-            "Operating System :: Microsoft :: Windows",
-            "Operating System :: POSIX",
+              # "Operating System :: OS Independent",
+              "Operating System :: Microsoft :: Windows",
+              "Operating System :: POSIX",
 
-            "Topic :: Software Development :: Libraries :: Python Modules",
+              "Topic :: Software Development :: Libraries :: Python Modules",
 
-            # "Programming Language :: C",
-            "Programming Language :: Python",
-            "Programming Language :: Python :: 2",
-            "Programming Language :: Python :: 2.4",
-            "Programming Language :: Python :: 2.5",
-            "Programming Language :: Python :: 2.6",
-            "Programming Language :: Python :: 2.7",
-            "Programming Language :: Python :: 3",
-            "Programming Language :: Python :: 3.1",
-            "Programming Language :: Python :: 3.2",
-            ],
+              # "Programming Language :: C",
+              "Programming Language :: Python",
+              "Programming Language :: Python :: 2",
+              "Programming Language :: Python :: 2.4",
+              "Programming Language :: Python :: 2.5",
+              "Programming Language :: Python :: 2.6",
+              "Programming Language :: Python :: 2.7",
+              "Programming Language :: Python :: 3",
+              "Programming Language :: Python :: 3.1",
+              "Programming Language :: Python :: 3.2",
+          ],
           long_description=long_description
           )
